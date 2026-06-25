@@ -38,7 +38,7 @@ const education = [
   {
     degree: 'B.Tech in Computer Science & Engineering',
     school: 'Parul University, Vadodara, Gujarat',
-    period: 'Aug 2022 — May 2026',
+    period: 'Aug 2022 — 2026',
   },
 ];
 

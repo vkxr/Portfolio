@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import {
-  HiCode, HiServer, HiDatabase, HiLightningBolt, HiChartBar, HiShieldCheck,
+  HiCode, HiServer, HiDatabase, HiLightningBolt, HiChartBar, HiShieldCheck, HiSparkles,
 } from 'react-icons/hi';
 
 const skills = [
@@ -41,6 +41,12 @@ const skills = [
     desc: 'AWS, Cloudflare, Vercel, Docker — CI/CD pipelines and serverless deployment.',
     color: '#EF4444',
   },
+  {
+    icon: <HiSparkles className="w-5 h-5" />,
+    title: 'AI Engineering',
+    desc: 'OpenAI API, LangChain.js, RAG pipelines, vector embeddings, tool calling, and agentic systems.',
+    color: '#F59E0B',
+  },
 ];
 
 export default function Skills() {
@@ -61,7 +67,7 @@ export default function Skills() {
           </h2>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {skills.map((skill, i) => (
             <motion.div
               key={skill.title}

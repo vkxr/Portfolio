@@ -4,34 +4,33 @@ import { HiBriefcase, HiAcademicCap, HiBadgeCheck } from 'react-icons/hi';
 
 const experiences = [
   {
+    role: 'Full Stack Developer',
+    type: 'Full-Time',
+    company: 'Veyber Services Pvt Ltd',
+    location: 'Remote, India',
+    period: 'Jan 2026 — Present',
+    bullets: [
+      'Replaced manual weekly reporting with a Postgres pipeline — saves the team 4 hrs of work per week.',
+      'Stripe end-to-end: subscriptions, webhooks, failed charge retries — no dropped events in 3 months.',
+      'Fixed N+1 joins and added composite indexes on 5 slow routes — response time down 30%.',
+      'Built an OpenAI function-calling tool that replaced 3 recurring manual workflows run weekly.',
+    ],
+    tech: ['Node.js', 'TypeScript', 'PostgreSQL', 'Stripe', 'OpenAI', 'Prisma', 'Next.js'],
+    current: true,
+  },
+  {
     role: 'Full Stack Developer Intern',
     type: 'Internship',
-    company: 'TuffTech.co',
-    period: 'Jan 2025 — Jun 2025',
-    description:
-      'Completed a 6-month internship focused on full-stack development. Built and maintained production web applications using React, Node.js, and PostgreSQL. Collaborated with the engineering team on API design, database optimization, and deployment pipelines.',
-    tech: ['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'Tailwind CSS'],
+    company: 'TuffTech Technologies',
+    location: 'Surat, India',
+    period: 'Jul 2025 — Dec 2025',
+    bullets: [
+      'Full-stack delivery on a MERN B2B app — owned API design, schema, and React UI per feature.',
+      'EXPLAIN ANALYZE + N+1 rewrites + index additions on 5 routes — latency cut 25%.',
+      'JWT refresh rotation, RBAC middleware, WebSocket live updates — shipped as reusable modules.',
+    ],
+    tech: ['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'WebSockets', 'Tailwind CSS'],
     current: false,
-  },
-  {
-    role: 'Full Stack Developer',
-    type: 'Freelance',
-    company: 'Self-Employed',
-    period: '2024 — Present',
-    description:
-      'Building custom web applications for clients. Designing and implementing full-stack solutions with modern frameworks, RESTful APIs, and cloud deployment.',
-    tech: ['React', 'Next.js', 'Node.js', 'PostgreSQL', 'AWS'],
-    current: true,
-  },
-  {
-    role: 'Open Source Contributor',
-    type: 'Community',
-    company: 'Various Projects',
-    period: '2023 — Present',
-    description:
-      'Active contributor to open-source projects. Submitted pull requests, fixed bugs, improved documentation, and engaged with the developer community.',
-    tech: ['JavaScript', 'TypeScript', 'Node.js', 'GitHub'],
-    current: true,
   },
 ];
 
@@ -99,15 +98,26 @@ export default function Experience() {
                           {exp.company}
                           <span className="mx-2 text-border">·</span>
                           <span className="text-xs font-mono text-primary/80">{exp.type}</span>
+                          {exp.location && (
+                            <>
+                              <span className="mx-2 text-border">·</span>
+                              <span className="text-xs text-text-muted/60">{exp.location}</span>
+                            </>
+                          )}
                         </p>
                       </div>
                       <span className="text-[11px] font-mono text-text-muted bg-bg/60 px-3 py-1 rounded-md border border-border whitespace-nowrap self-start">
                         {exp.period}
                       </span>
                     </div>
-                    <p className="text-sm text-text-muted leading-relaxed mb-4">
-                      {exp.description}
-                    </p>
+                    <ul className="space-y-1.5 mb-4">
+                      {exp.bullets.map((b, bi) => (
+                        <li key={bi} className="flex items-start gap-2 text-sm text-text-muted leading-relaxed">
+                          <span className="mt-[6px] w-1 h-1 rounded-full bg-primary/60 flex-shrink-0" />
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
                     <div className="flex flex-wrap gap-1.5">
                       {exp.tech.map((t) => (
                         <span
@@ -164,24 +174,37 @@ export default function Experience() {
           className="mt-10"
         >
           <h3 className="text-xs font-mono text-primary/70 tracking-widest uppercase mb-6">Certifications</h3>
-          <div className="flex items-start gap-5 md:gap-7">
-            <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center border border-secondary/30 bg-secondary/10 text-secondary">
-              <HiBadgeCheck className="w-5 h-5" />
-            </div>
-            <div className="p-5 md:p-6 flex-1 rounded-xl border border-border bg-bg-card/40">
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
-                <div>
-                  <h4 className="text-base font-semibold">Web Development + DevOps Cohort</h4>
-                  <p className="text-sm text-text-muted mt-0.5">100xDevs · Cohort 3</p>
-                  <p className="text-xs text-text-muted/70 mt-1">
-                    Comprehensive knowledge of web application development and system deployment.
-                    <br />
-                    <span className="text-text-muted/50">Issued by Harkirat Singh, Founder</span>
-                  </p>
+          <div className="space-y-4">
+            <div className="flex items-start gap-5 md:gap-7">
+              <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center border border-secondary/30 bg-secondary/10 text-secondary">
+                <HiBadgeCheck className="w-5 h-5" />
+              </div>
+              <div className="p-5 md:p-6 flex-1 rounded-xl border border-border bg-bg-card/40">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                  <div>
+                    <h4 className="text-base font-semibold">Web Development &amp; DevOps Cohort</h4>
+                    <p className="text-sm text-text-muted mt-0.5">100xDevs · Harkirat Singh</p>
+                  </div>
+                  <span className="text-[11px] font-mono text-text-muted bg-bg/60 px-3 py-1 rounded-md border border-border whitespace-nowrap self-start">
+                    2024
+                  </span>
                 </div>
-                <span className="text-[11px] font-mono text-text-muted bg-bg/60 px-3 py-1 rounded-md border border-border whitespace-nowrap self-start">
-                  Aug 2024
-                </span>
+              </div>
+            </div>
+            <div className="flex items-start gap-5 md:gap-7">
+              <div className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 rounded-xl flex items-center justify-center border border-secondary/30 bg-secondary/10 text-secondary">
+                <HiBadgeCheck className="w-5 h-5" />
+              </div>
+              <div className="p-5 md:p-6 flex-1 rounded-xl border border-border bg-bg-card/40">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2">
+                  <div>
+                    <h4 className="text-base font-semibold">Computer Networks and Internet Protocol</h4>
+                    <p className="text-sm text-text-muted mt-0.5">NPTEL · IIT Kharagpur</p>
+                  </div>
+                  <span className="text-[11px] font-mono text-text-muted bg-bg/60 px-3 py-1 rounded-md border border-border whitespace-nowrap self-start">
+                    2024
+                  </span>
+                </div>
               </div>
             </div>
           </div>

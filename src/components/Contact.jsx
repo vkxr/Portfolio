@@ -15,8 +15,8 @@ const socials = [
   {
     icon: <FaLinkedin size={18} />,
     label: 'LinkedIn',
-    value: 'vivek-rao-a20699278',
-    href: 'https://linkedin.com/in/vivek-rao-a20699278',
+    value: 'vivek-kumar-100a0b402',
+    href: 'https://linkedin.com/in/vivek-kumar-100a0b402/',
     color: '#0A66C2',
   },
   {

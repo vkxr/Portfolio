@@ -5,6 +5,7 @@ import {
   SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiPrisma,
   SiTailwindcss, SiCloudflare, SiGit, SiDocker,
   SiGithub, SiVercel, SiPostman, SiFigma, SiRedux, SiSocketdotio,
+  SiRedis, SiOpenai, SiStripe,
 } from 'react-icons/si';
 import { FaCss3Alt, FaAws } from 'react-icons/fa';
 
@@ -36,6 +37,14 @@ const categories = [
     items: [
       { name: 'PostgreSQL', icon: <SiPostgresql />, color: '#4169E1' },
       { name: 'MongoDB', icon: <SiMongodb />, color: '#47A248' },
+      { name: 'Redis', icon: <SiRedis />, color: '#DC382D' },
+    ],
+  },
+  {
+    title: 'AI / ML',
+    items: [
+      { name: 'OpenAI API', icon: <SiOpenai />, color: '#ffffff' },
+      { name: 'Stripe', icon: <SiStripe />, color: '#635BFF' },
     ],
   },
   {

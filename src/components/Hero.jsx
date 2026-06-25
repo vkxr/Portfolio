@@ -51,11 +51,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mb-5"
+          className="mb-5 flex flex-wrap items-center justify-center gap-2"
         >
-          <span className="inline-block px-4 py-1.5 text-sm font-mono font-medium text-primary bg-primary/10 border border-primary/20 rounded-lg">
-            Full Stack Web Developer
-          </span>
+          {['Full Stack Engineer', 'AI Engineer', 'Backend Engineer'].map((role, i) => (
+            <span key={role} className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-mono font-medium text-primary bg-primary/10 border border-primary/20 rounded-lg">
+              {i > 0 && <span className="w-1 h-1 rounded-full bg-primary/40" />}
+              {role}
+            </span>
+          ))}
         </motion.div>
 
         {/* Description */}
@@ -65,8 +68,8 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-base md:text-lg text-text-muted max-w-xl mx-auto mb-9 leading-relaxed"
         >
-          Building scalable web applications and modern digital products.
-          I craft performant, accessible, and visually stunning experiences.
+          Full Stack &amp; AI Engineer shipping SaaS platforms, payment systems, and real-time features.
+          I build autonomous AI agents, multi-tenant backends, and own features end-to-end.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -101,7 +104,7 @@ export default function Hero() {
         >
           {[
             { icon: <FaGithub size={18} />, href: 'https://github.com/vkxr', label: 'GitHub' },
-            { icon: <FaLinkedin size={18} />, href: 'https://linkedin.com/in/vivek-rao-a20699278', label: 'LinkedIn' },
+            { icon: <FaLinkedin size={18} />, href: 'https://linkedin.com/in/vivek-kumar-100a0b402/', label: 'LinkedIn' },
           ].map((social) => (
             <a
               key={social.label}

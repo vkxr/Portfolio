@@ -5,54 +5,81 @@ import { FaGithub } from 'react-icons/fa';
 
 const projects = [
   {
+    title: 'NexusAI — AI-Native Multi-Tenant SaaS',
+    description:
+      'Production-ready B2B SaaS boilerplate combining multi-tenant workspaces, subscription billing, and token-based AI quotas. Supports Claude, GPT-4o, and Gemini via OpenRouter. Features Razorpay webhooks with retry logic, JWT token rotation with server-side revocation, and role-based access control (OWNER/ADMIN/MEMBER) — fully deployable as a starting point for any AI product.',
+    tech: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma', 'Redis', 'Razorpay', 'Docker', 'OpenRouter'],
+    github: 'https://github.com/vkxr/ai-saas',
+    demo: null,
+    gradient: 'from-violet-500/20 to-purple-500/20',
+    period: '2026',
+    featured: true,
+  },
+  {
+    title: 'Autonomous Multi-Agent Engineering System',
+    description:
+      'Self-directing agent platform that accepts a natural language goal, decomposes it into steps, runs specialized workers (file I/O, shell commands, Playwright scraping, code search via ripgrep), validates each result with a Critic LLM, and self-corrects on failure — all streamed live to the browser via SSE. Token budget per turn prevents runaway cost.',
+    tech: ['Next.js 14', 'TypeScript', 'Fastify', 'PostgreSQL', 'OpenRouter', 'Playwright', 'SSE', 'Prisma'],
+    github: 'https://github.com/vkxr/multi-agent',
+    demo: 'https://multi-agent-swart-one.vercel.app/',
+    gradient: 'from-blue-500/20 to-cyan-500/20',
+    period: '2026',
+    featured: true,
+  },
+  {
+    title: 'Agentic RAG Knowledge System',
+    description:
+      'Chat with your PDF documents using AI-powered hybrid retrieval. Combines dense vector search (pgvector) with keyword-based BM25 matching via reciprocal rank fusion — no separate vector DB required. Streams GPT-4o-mini responses with inline source citations and supports multi-document queries across simultaneously uploaded files.',
+    tech: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'pgvector', 'OpenAI', 'Prisma', 'Tailwind CSS'],
+    github: 'https://github.com/vkxr/rag-knowledge-system',
+    demo: 'https://rag-knowledge-system-snowy.vercel.app/',
+    gradient: 'from-emerald-500/20 to-teal-500/20',
+    period: 'Jun 2026',
+    featured: true,
+  },
+  {
     title: 'ChatRoom — Real-Time Communication',
     description:
-      'A full-stack real-time chat application featuring WebRTC-based peer-to-peer audio and video calling, deployed on Vercel with a PostgreSQL database on Render. Includes Socket.IO peer connection signaling, inline call event indicators, and a responsive mobile-first UI.',
-    tech: ['React', 'Node.js', 'TypeScript', 'WebRTC', 'Socket.IO', 'PostgreSQL', 'Prisma'],
-    github: 'https://github.com/vkxr',
-    demo: '#',
-    gradient: 'from-indigo-500/20 to-purple-500/20',
-    period: 'Oct 2025 — Present',
+      'Minimalist room-based chat app with peer-to-peer WebRTC audio/video calling and screen sharing, built on a strict black-and-white design system. Incoming call modals, live typing indicators, in-chat call-event pills, and JWT-secured rooms — all without disrupting the chat flow. Signaling via Socket.IO.',
+    tech: ['React 19', 'Node.js', 'TypeScript', 'WebRTC', 'Socket.IO', 'PostgreSQL', 'Prisma'],
+    github: 'https://github.com/vkxr/chatroom',
+    demo: 'https://chatroom-client-eight.vercel.app',
+    gradient: 'from-indigo-500/20 to-blue-500/20',
+    period: 'Jun 2026',
+    featured: false,
   },
   {
-    title: 'AI Interview Preparation Platform',
+    title: 'MusicVote — Collaborative Music Queue',
     description:
-      'An AI-powered mock interview platform that simulates real interview experiences. Features real-time voice AI interview simulation, automated evaluation, transcript storage, and personalized feedback to help candidates prepare for technical interviews.',
-    tech: ['React', 'Node.js', 'TypeScript', 'AI/ML', 'WebSockets', 'MongoDB'],
-    github: 'https://github.com/vkxr',
-    demo: '#',
-    gradient: 'from-violet-500/20 to-fuchsia-500/20',
-    period: '2025',
+      'Real-time music queue where audiences vote on what plays next at parties, streams, or events. Redis as the single source of truth for all live session data with TTL-based auto-cleanup. Enforces one active vote per user, YouTube IFrame playback, and creator-controlled queue mode — Google OAuth via NextAuth.',
+    tech: ['Next.js 15', 'TypeScript', 'Redis', 'PostgreSQL', 'NextAuth', 'YouTube API', 'Prisma'],
+    github: 'https://github.com/vkxr/Music_Voting-',
+    demo: 'https://music-voting-t73k.vercel.app/',
+    gradient: 'from-pink-500/20 to-rose-500/20',
+    period: 'Jun 2026',
+    featured: false,
   },
   {
-    title: 'DrawTogether — Collaborative Whiteboard',
+    title: 'URL Shortener',
     description:
-      'A multiplayer collaborative whiteboard using Next.js where users draw, write, and erase together on shared canvases via real-time WebSocket synchronization. Structured as a monorepo with shared TypeScript types; integrated in-session real-time chat.',
-    tech: ['Next.js', 'Node.js', 'TypeScript', 'WebSockets', 'PostgreSQL', 'Tailwind CSS'],
-    github: 'https://github.com/vkxr',
-    demo: '#',
-    gradient: 'from-emerald-500/20 to-teal-500/20',
-    period: 'Aug 2025 — Present',
-  },
-  {
-    title: 'Second Brain — AI Content Manager',
-    description:
-      'A platform to save, tag, and search YouTube, Twitter & web content via GitHub OAuth. Integrated Gemini AI for semantic search across saved collections. Public Brain Share feature for publishing curated collections with JWT-secured REST API.',
-    tech: ['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Gemini API'],
-    github: 'https://github.com/vkxr',
-    demo: '#',
-    gradient: 'from-amber-500/20 to-orange-500/20',
-    period: 'Jan 2025 — Mar 2025',
+      'Production-ready URL shortener with Zod schema validation, automatic 30-minute expiry, secure redirects, and a dark mode React UI. RESTful Express.js API with CORS and real-time copy-to-clipboard feedback.',
+    tech: ['React 19', 'TypeScript', 'Node.js', 'Express.js', 'Vite', 'Zod'],
+    github: 'https://github.com/vkxr/url-shortner',
+    demo: 'https://url-shortner-329g.vercel.app/',
+    gradient: 'from-cyan-500/20 to-blue-500/20',
+    period: 'Feb 2026',
+    featured: false,
   },
   {
     title: 'BloggingSphere — Blogging Platform',
     description:
-      'A complete blogging platform with full CRUD operations, JWT authentication, and user ownership validation via a RESTful API. Features a rich Markdown editor for structured content with a fully responsive UI, backend deployed on Render.',
-    tech: ['React', 'Node.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Tailwind CSS'],
-    github: 'https://github.com/vkxr',
-    demo: '#',
-    gradient: 'from-cyan-500/20 to-blue-500/20',
-    period: 'Dec 2024 — Feb 2025',
+      'Full-featured blogging platform with CRUD operations, JWT authentication, user ownership validation, and a rich Markdown editor. RESTful API backed by PostgreSQL and Prisma, fully responsive UI built with React and Tailwind CSS.',
+    tech: ['React', 'TypeScript', 'Vite', 'PostgreSQL', 'Prisma', 'Tailwind CSS'],
+    github: 'https://github.com/vkxr/Blogging-Website',
+    demo: 'https://blogging-website-ashy.vercel.app',
+    gradient: 'from-amber-500/20 to-orange-500/20',
+    period: 'Jan 2025',
+    featured: false,
   },
 ];
 
@@ -125,25 +152,41 @@ export default function Projects() {
                   </div>
 
                   {/* Links */}
-                  <div className="flex items-center gap-2 flex-shrink-0 md:mt-1">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2.5 rounded-lg border border-border text-text-muted hover:text-text hover:border-border-hover hover:bg-bg-card transition-all duration-300"
-                      aria-label={`GitHub: ${project.title}`}
-                    >
-                      <FaGithub size={16} />
-                    </a>
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="p-2.5 rounded-lg border border-border text-text-muted hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-300"
-                      aria-label={`Live Demo: ${project.title}`}
-                    >
-                      <HiExternalLink size={16} />
-                    </a>
+                  <div className="flex flex-col items-end gap-2 flex-shrink-0 md:mt-1">
+                    {project.featured && (
+                      <span className="text-[9px] font-mono font-semibold text-primary/80 bg-primary/10 border border-primary/20 px-2 py-0.5 rounded-full tracking-widest uppercase">
+                        Featured
+                      </span>
+                    )}
+                    <div className="flex items-center gap-2">
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2.5 rounded-lg border border-border text-text-muted hover:text-text hover:border-border-hover hover:bg-bg-card transition-all duration-300"
+                        aria-label={`GitHub: ${project.title}`}
+                      >
+                        <FaGithub size={16} />
+                      </a>
+                      {project.demo ? (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2.5 rounded-lg border border-border text-text-muted hover:text-primary hover:border-primary/30 hover:bg-primary/5 transition-all duration-300"
+                          aria-label={`Live Demo: ${project.title}`}
+                        >
+                          <HiExternalLink size={16} />
+                        </a>
+                      ) : (
+                        <span
+                          className="p-2.5 rounded-lg border border-border/40 text-text-muted/30 cursor-not-allowed"
+                          title="No live demo"
+                        >
+                          <HiExternalLink size={16} />
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>

@@ -48,18 +48,13 @@ export default function About() {
             className="space-y-4"
           >
             <p className="text-sm text-text-muted leading-relaxed">
-              I'm a passionate <span className="text-text font-medium">Full Stack Web Developer</span> building
-              modern web applications using <span className="text-text font-medium">React, Node.js, and TypeScript</span>.
-              I develop scalable front-end interfaces and robust back-end systems — covering REST APIs,
-              authentication, database design, and real-time communication with WebRTC and Socket.IO.
+              I'm a <span className="text-text font-medium">Full Stack &amp; AI Engineer</span> with 1+ year shipping SaaS platforms, payment systems, and real-time features on the <span className="text-text font-medium">MERN stack and TypeScript</span>. I built an autonomous multi-tool AI coding agent from scratch — extending it into a multi-agent RAG system with hybrid retrieval.
             </p>
             <p className="text-sm text-text-muted leading-relaxed">
-              Comfortable with end-to-end development and cloud deployment across the full stack.
-              Currently pursuing B.Tech in Computer Science & Engineering at Parul University (May 2026).
+              Focused on roles where I own features end-to-end and <span className="text-text font-medium">AI is the core of the product</span>. Currently at Veyber Services building Stripe billing pipelines and OpenAI-powered automation tools.
             </p>
             <p className="text-sm text-text-muted leading-relaxed">
-              I believe great software is a blend of clean architecture, thoughtful UX, and robust engineering.
-              Always open to interesting projects and collaboration opportunities.
+              Pursuing B.Tech in Computer Science at Parul University, Vadodara (May 2026). Open to remote roles at startups where AI is central to what they build.
             </p>
 
             {/* Code block */}
@@ -72,9 +67,10 @@ export default function About() {
               <code className="text-text-muted">
                 <span className="text-primary">const</span>{' '}
                 <span className="text-text">developer</span> = {'{'}<br />
-                &nbsp;&nbsp;name: <span className="text-secondary">&quot;Vivek Rao&quot;</span>,<br />
-                &nbsp;&nbsp;role: <span className="text-secondary">&quot;Full Stack Developer&quot;</span>,<br />
-                &nbsp;&nbsp;passion: <span className="text-secondary">&quot;Building scalable products&quot;</span>,<br />
+                &nbsp;&nbsp;name: <span className="text-secondary">&quot;Vivek Kumar&quot;</span>,<br />
+                &nbsp;&nbsp;role: <span className="text-secondary">&quot;Full Stack + AI Engineer&quot;</span>,<br />
+                &nbsp;&nbsp;stack: <span className="text-secondary">&quot;Next.js · Node.js · TypeScript&quot;</span>,<br />
+                &nbsp;&nbsp;openTo: <span className="text-secondary">&quot;Remote startup roles&quot;</span>,<br />
                 &nbsp;&nbsp;coffee: <span className="text-primary">true</span><br />
                 {'}'};
               </code>
@@ -111,9 +107,9 @@ export default function About() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-3 mt-4">
               {[
-                { value: '10+', label: 'Projects' },
-                { value: '2+', label: 'Years Exp.' },
-                { value: '15+', label: 'Technologies' },
+                { value: '15+', label: 'Projects' },
+                { value: '1+', label: 'Years Exp.' },
+                { value: '20+', label: 'Technologies' },
               ].map((stat) => (
                 <div
                   key={stat.label}

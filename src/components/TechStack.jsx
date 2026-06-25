@@ -5,64 +5,81 @@ import {
   SiNodedotjs, SiExpress, SiMongodb, SiPostgresql, SiPrisma,
   SiTailwindcss, SiCloudflare, SiGit, SiDocker,
   SiGithub, SiVercel, SiPostman, SiFigma, SiRedux, SiSocketdotio,
-  SiRedis, SiOpenai, SiStripe,
+  SiRedis, SiOpenai, SiStripe, SiPython, SiFastapi,
+  SiJest, SiGithubactions,
 } from 'react-icons/si';
 import { FaCss3Alt, FaAws } from 'react-icons/fa';
+import { MdOutlineVideocam, MdBugReport } from 'react-icons/md';
+import { HiSparkles } from 'react-icons/hi';
 
 const categories = [
   {
     title: 'Frontend',
     items: [
-      { name: 'HTML5', icon: <SiHtml5 />, color: '#E34F26' },
-      { name: 'CSS3', icon: <FaCss3Alt />, color: '#1572B6' },
-      { name: 'JavaScript', icon: <SiJavascript />, color: '#F7DF1E' },
-      { name: 'TypeScript', icon: <SiTypescript />, color: '#3178C6' },
-      { name: 'React.js', icon: <SiReact />, color: '#61DAFB' },
-      { name: 'Next.js', icon: <SiNextdotjs />, color: '#ffffff' },
-      { name: 'Redux', icon: <SiRedux />, color: '#764ABC' },
-      { name: 'Tailwind CSS', icon: <SiTailwindcss />, color: '#06B6D4' },
+      { name: 'HTML5',       icon: <SiHtml5 />,       color: '#E34F26' },
+      { name: 'CSS3',        icon: <FaCss3Alt />,      color: '#1572B6' },
+      { name: 'JavaScript',  icon: <SiJavascript />,   color: '#F7DF1E' },
+      { name: 'TypeScript',  icon: <SiTypescript />,   color: '#3178C6' },
+      { name: 'React.js',    icon: <SiReact />,        color: '#61DAFB' },
+      { name: 'Next.js',     icon: <SiNextdotjs />,    color: '#ffffff' },
+      { name: 'Redux',       icon: <SiRedux />,        color: '#764ABC' },
+      { name: 'Tailwind CSS',icon: <SiTailwindcss />,  color: '#06B6D4' },
     ],
   },
   {
     title: 'Backend',
     items: [
-      { name: 'Node.js', icon: <SiNodedotjs />, color: '#339933' },
-      { name: 'Express.js', icon: <SiExpress />, color: '#ffffff' },
-      { name: 'Socket.IO', icon: <SiSocketdotio />, color: '#010101' },
-      { name: 'Prisma ORM', icon: <SiPrisma />, color: '#2D3748' },
+      { name: 'Python',      icon: <SiPython />,       color: '#3776AB' },
+      { name: 'FastAPI',     icon: <SiFastapi />,      color: '#009688' },
+      { name: 'Node.js',     icon: <SiNodedotjs />,    color: '#339933' },
+      { name: 'Express.js',  icon: <SiExpress />,      color: '#ffffff' },
+      { name: 'Socket.IO',   icon: <SiSocketdotio />,  color: '#ffffff' },
+      { name: 'Prisma ORM',  icon: <SiPrisma />,       color: '#2D3748' },
     ],
   },
   {
     title: 'Database',
     items: [
-      { name: 'PostgreSQL', icon: <SiPostgresql />, color: '#4169E1' },
-      { name: 'MongoDB', icon: <SiMongodb />, color: '#47A248' },
-      { name: 'Redis', icon: <SiRedis />, color: '#DC382D' },
+      { name: 'PostgreSQL',  icon: <SiPostgresql />,   color: '#4169E1' },
+      { name: 'pgvector',    icon: <SiPostgresql />,   color: '#7C3AED' },
+      { name: 'MongoDB',     icon: <SiMongodb />,      color: '#47A248' },
+      { name: 'Redis',       icon: <SiRedis />,        color: '#DC382D' },
     ],
   },
   {
     title: 'AI / ML',
     items: [
-      { name: 'OpenAI API', icon: <SiOpenai />, color: '#ffffff' },
-      { name: 'Stripe', icon: <SiStripe />, color: '#635BFF' },
+      { name: 'OpenAI API',   icon: <SiOpenai />,      color: '#ffffff' },
+      { name: 'LangChain',    icon: <HiSparkles />,    color: '#1C7DCA' },
+      { name: 'RAG',          icon: <HiSparkles />,    color: '#8B5CF6' },
     ],
   },
   {
     title: 'DevOps & Cloud',
     items: [
-      { name: 'AWS', icon: <FaAws />, color: '#FF9900' },
-      { name: 'Cloudflare', icon: <SiCloudflare />, color: '#F38020' },
-      { name: 'Docker', icon: <SiDocker />, color: '#2496ED' },
-      { name: 'Vercel', icon: <SiVercel />, color: '#ffffff' },
+      { name: 'AWS',             icon: <FaAws />,             color: '#FF9900' },
+      { name: 'Docker',          icon: <SiDocker />,          color: '#2496ED' },
+      { name: 'GitHub Actions',  icon: <SiGithubactions />,   color: '#2088FF' },
+      { name: 'Vercel',          icon: <SiVercel />,          color: '#ffffff' },
+      { name: 'Cloudflare',      icon: <SiCloudflare />,      color: '#F38020' },
+    ],
+  },
+  {
+    title: 'Testing',
+    items: [
+      { name: 'Jest',        icon: <SiJest />,            color: '#C21325' },
+      { name: 'Playwright',  icon: <MdBugReport />,      color: '#2EAD33' },
     ],
   },
   {
     title: 'Tools',
     items: [
-      { name: 'Git', icon: <SiGit />, color: '#F05032' },
-      { name: 'GitHub', icon: <SiGithub />, color: '#ffffff' },
-      { name: 'Postman', icon: <SiPostman />, color: '#FF6C37' },
-      { name: 'Figma', icon: <SiFigma />, color: '#F24E1E' },
+      { name: 'Git',      icon: <SiGit />,      color: '#F05032' },
+      { name: 'GitHub',   icon: <SiGithub />,   color: '#ffffff' },
+      { name: 'Stripe',   icon: <SiStripe />,   color: '#635BFF' },
+      { name: 'WebRTC',   icon: <MdOutlineVideocam />, color: '#6B7280' },
+      { name: 'Postman',  icon: <SiPostman />,  color: '#FF6C37' },
+      { name: 'Figma',    icon: <SiFigma />,    color: '#F24E1E' },
     ],
   },
 ];
@@ -120,7 +137,6 @@ export default function TechStack() {
                     <span className="text-xs font-medium text-text-muted group-hover:text-text transition-colors truncate">
                       {item.name}
                     </span>
-                    {/* Hover glow */}
                     <div
                       className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                       style={{

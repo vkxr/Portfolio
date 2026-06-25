@@ -54,7 +54,7 @@ export default function About() {
               Focused on roles where I own features end-to-end and <span className="text-text font-medium">AI is the core of the product</span>. Currently at Veyber Services building Stripe billing pipelines and OpenAI-powered automation tools.
             </p>
             <p className="text-sm text-text-muted leading-relaxed">
-              Pursuing B.Tech in Computer Science at Parul University, Vadodara (May 2026). Open to remote roles at startups where AI is central to what they build.
+              Pursuing B.Tech in Computer Science at Parul University (May 2026), based in Gurugram, Haryana. Open to remote roles at startups where AI is central to what they build.
             </p>
 
             {/* Code block */}

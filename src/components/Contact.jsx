@@ -82,7 +82,7 @@ export default function Contact() {
                 <HiOutlineLocationMarker size={14} />
                 <span>Location</span>
               </div>
-              <p className="text-sm font-medium">Vadodara, Gujarat, India</p>
+              <p className="text-sm font-medium">Gurugram, Haryana, India</p>
             </div>
 
             {socials.map((social) => (

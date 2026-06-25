@@ -10,7 +10,7 @@ const projects = [
       'Production-ready B2B SaaS boilerplate combining multi-tenant workspaces, subscription billing, and token-based AI quotas. Supports Claude, GPT-4o, and Gemini via OpenRouter. Features Razorpay webhooks with retry logic, JWT token rotation with server-side revocation, and role-based access control (OWNER/ADMIN/MEMBER) — fully deployable as a starting point for any AI product.',
     tech: ['Next.js 15', 'TypeScript', 'PostgreSQL', 'Prisma', 'Redis', 'Razorpay', 'Docker', 'OpenRouter'],
     github: 'https://github.com/vkxr/ai-saas',
-    demo: null,
+    demo: 'https://ai-saas-jtx2.vercel.app/',
     gradient: 'from-violet-500/20 to-purple-500/20',
     period: '2026',
     featured: true,
